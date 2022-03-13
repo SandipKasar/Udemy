@@ -1,3 +1,4 @@
+package com.foray.core;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -9,7 +10,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class CreateDriverSession {
+public class CreateBrowserSession {
 	public static AppiumDriver initializeDriver(String platformName) throws Exception {
 
 		DesiredCapabilities caps = new DesiredCapabilities();
@@ -22,14 +23,11 @@ public class CreateDriverSession {
 			caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Sandip");
 			caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator");
 			caps.setCapability(MobileCapabilityType.UDID, "RZ8R415L7VY");
-
-			//caps.setCapability("appPackage","io.appium.android.apis");
-		//	caps.setCapability("appActivity","io.appium.android.apis.app.HelloWorld");
-			
-			String andAppUrl = System.getProperty("user.dir") + File.separator + "resources" + File.separator
-					+ "ApiDemos-debug.apk";
-			caps.setCapability(MobileCapabilityType.APP, andAppUrl);
-
+			String andChromedriver = System.getProperty("user.dir") + File.separator + "resources" + File.separator
+					+ "chromedriver.exe";
+			caps.setCapability("chromedriverExecutable", andChromedriver);
+			caps.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
+		
 			
 	
 			return new AndroidDriver(url, caps);

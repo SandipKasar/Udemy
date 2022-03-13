@@ -1,3 +1,4 @@
+package com.foray.core;
 
 public class MyClass {
 	// fields-parameters-variables-int, float, double, boolean, String

@@ -1,3 +1,4 @@
+package com.foray.core;
 import io.appium.java_client.AppiumDriver;
 
 public class iOSPredicateString {

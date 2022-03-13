@@ -1,3 +1,4 @@
+package com.foray.core;
 
 import java.util.concurrent.TimeUnit;
 

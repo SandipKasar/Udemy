@@ -1,3 +1,4 @@
+package com.foray.core;
 import org.openqa.selenium.By;
 
 import io.appium.java_client.AppiumDriver;

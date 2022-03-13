@@ -1,3 +1,4 @@
+package com.foray.core;
 
 public abstract class Shape {
 	String color;
